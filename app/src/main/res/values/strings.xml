@@ -16,4 +16,7 @@
     <string name="menu_english_surah">Surahs-English Translation</string>
     <string name="menu_english_parah">Parahs-English Translation</string>
     <string name="menu_about">About</string>
+    <string name="about_quran_desc">Quran is the holy book of Islam. Muslims believes it as
+    "The Words of Allah Almighty" and consider it a final testament. </string>
+    <string name="about_me">I am Iqra Sarwar. This Quran application is developed by me. You can read Urdu, English translations of quran along with arabic in it.</string>
 </resources>

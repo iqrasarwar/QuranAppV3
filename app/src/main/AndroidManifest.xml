@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuranAppV3">
         <activity
-            android:name=".SplashActivity"
+            android:name=".NavigationDrawerActivity"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/Theme.QuranAppV3.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -28,7 +30,7 @@
             android:name=".AllParahs"
             android:exported="false" />
         <activity
-            android:name=".NavigationDrawerActivity"
+            android:name=".SplashActivity"
             android:exported="true"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/Theme.QuranAppV3.NoActionBar">

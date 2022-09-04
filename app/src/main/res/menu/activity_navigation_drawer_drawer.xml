@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_baseline_menu_book_24"
+            android:title="Main Menu" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about"
+            android:title="About" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Settings" />
+
+    </group>
+    <item android:title="Surahs">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_urdu_surah"
+                    android:icon="@drawable/translate"
+                    android:title="Urdu Translations" />
+                <item
+                    android:id="@+id/nav_english_surah"
+                    android:icon="@drawable/ic_baseline_g_translate_24"
+                    android:title="English Translations" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Parahs">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_urdu_parah"
+                    android:icon="@drawable/translate"
+                    android:title="Urdu Translations" />
+                <item
+                    android:id="@+id/nav_english_parah"
+                    android:icon="@drawable/ic_baseline_g_translate_24"
+                    android:title="English Translations" />
+            </group>
+        </menu>
+    </item>
+</menu>

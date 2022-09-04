@@ -47,6 +47,7 @@ public class parahUrduFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getContext(), ParaContext.class);
                 intent.putExtra("index", l + "");
+                intent.putExtra("type","urdu");
                 startActivity(intent);
             }
         });

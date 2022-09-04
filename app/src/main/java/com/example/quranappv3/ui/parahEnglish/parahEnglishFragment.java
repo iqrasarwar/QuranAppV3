@@ -43,6 +43,7 @@ public class parahEnglishFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getContext(), ParaContext.class);
                 intent.putExtra("index", l + "");
+                intent.putExtra("type","english");
                 startActivity(intent);
             }
         });

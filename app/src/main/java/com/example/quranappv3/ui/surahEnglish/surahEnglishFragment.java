@@ -40,6 +40,7 @@ public class surahEnglishFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getContext(), SurahContext.class);
                 intent.putExtra("index", l + "");
+                intent.putExtra("type","english");
                 startActivity(intent);
             }
         });

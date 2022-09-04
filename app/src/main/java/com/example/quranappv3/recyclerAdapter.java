@@ -1,4 +1,6 @@
 package com.example.quranappv3;
+import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +11,9 @@ import java.util.ArrayList;
 
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myViewHolder> {
     ArrayList<Ayat> ayatList;
-    public recyclerAdapter(ArrayList<Ayat> friendsList) {
+    String Type;
+    public recyclerAdapter(ArrayList<Ayat> friendsList,String type) {
+        Type=type;
         this.ayatList = friendsList;
     }
 
@@ -19,7 +23,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myView
 
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.translated_ayat, parent, false);
-        return new myViewHolder(itemView);
+        return new myViewHolder(itemView,parent.getContext());
     }
 
     @Override
@@ -28,6 +32,14 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myView
         holder.arabicAyat.setText(holder.data.getArabicText());
         holder.englishTrans.setText(String.valueOf(holder.data.getEnglishMohsin()));
         holder.urduTrans.setText(holder.data.getUrduFateh());
+        if(Type.equals("urdu"))
+        {
+            holder.englishTrans.setText("");
+        }
+        if(Type.equals("english"))
+        {
+            holder.urduTrans.setText("");
+        }
     }
 
     @Override
@@ -41,11 +53,19 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myView
         TextView englishTrans;
         TextView urduTrans;
         Ayat data;
-        public myViewHolder(@NonNull View itemView) {
+        public myViewHolder(@NonNull View itemView, Context context) {
             super(itemView);
             arabicAyat = itemView.findViewById(R.id.textView4);
-            englishTrans = itemView.findViewById(R.id.textView5);
-            urduTrans = itemView.findViewById(R.id.textView6);
+            urduTrans = itemView.findViewById(R.id.textView5);
+            englishTrans = itemView.findViewById(R.id.textView6);
+            Typeface typeface = Typeface.createFromAsset(
+                    context.getAssets(),
+                    "noorehuda.ttf");
+            Typeface urduface = Typeface.createFromAsset(
+                    context.getAssets(),
+                    "Jameel Noori Nastaleeq.ttf");
+            arabicAyat.setTypeface(typeface);
+            urduTrans.setTypeface(urduface);
         }
     }
 }

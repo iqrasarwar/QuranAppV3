@@ -7,6 +7,8 @@
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/drawable/ic_baseline_g_translate_24.xml" value="0.2115" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/drawable/ic_baseline_menu_book_24.xml" value="0.2115" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2115" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/drawable/reactangularborder.xml" value="0.1" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/drawable/translate.xml" value="0.2115" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/activity_all_parahs.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/activity_all_surahs.xml" value="0.17074275362318841" />
@@ -16,10 +18,14 @@
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/activity_surah_context.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/app_bar_navigation_drawer.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/content_navigation_drawer.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_about.xml" value="0.17391304347826086" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_gallery.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_home.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_main_menu.xml" value="0.17391304347826086" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_parah_english.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_parah_urdu.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_search.xml" value="0.17391304347826086" />
+        <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_slideshow.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_surah_english.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/BUTT SYSTEMS/AndroidStudioProjects/QuranAppV3/app/src/main/res/layout/fragment_surah_urdu.xml" value="0.20416666666666666" />

@@ -12,9 +12,11 @@ import java.util.ArrayList;
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myViewHolder> {
     ArrayList<Ayat> ayatList;
     String Type;
+    GlobalSettings s;
     public recyclerAdapter(ArrayList<Ayat> friendsList,String type) {
         Type=type;
         this.ayatList = friendsList;
+        s = GlobalSettings.getInstance();
     }
 
     @NonNull
@@ -30,8 +32,14 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myView
     public void onBindViewHolder(@NonNull recyclerAdapter.myViewHolder holder, int position) {
         holder.data=ayatList.get(position);
         holder.arabicAyat.setText(holder.data.getArabicText());
-        holder.englishTrans.setText(String.valueOf(holder.data.getEnglishMohsin()));
-        holder.urduTrans.setText(holder.data.getUrduFateh());
+        if(s.getEnglishTraslator().equals("mohsin"))
+            holder.englishTrans.setText(String.valueOf(holder.data.getEnglishMohsin()));
+        if(s.getEnglishTraslator().equals("taqi"))
+            holder.englishTrans.setText(String.valueOf(holder.data.getTaqiUsmani()));
+        if(s.getUrduTranslator().equals("fateh"))
+            holder.urduTrans.setText(String.valueOf(holder.data.getUrduFateh()));
+        if(s.getUrduTranslator().equals("mehmood"))
+            holder.urduTrans.setText(String.valueOf(holder.data.getUrduMehmood()));
         if(Type.equals("urdu"))
         {
             holder.englishTrans.setText("");

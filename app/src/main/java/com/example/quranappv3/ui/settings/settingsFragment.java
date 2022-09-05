@@ -10,11 +10,13 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.quranappv3.DataBaseHelper;
+import com.example.quranappv3.GlobalSettings;
 import com.example.quranappv3.R;
 import com.example.quranappv3.Surah;
 import com.example.quranappv3.SurahContext;
@@ -24,55 +26,43 @@ import com.example.quranappv3.databinding.FragmentSettingsBinding;
 import java.util.List;
 
 public class settingsFragment extends Fragment {
-
     RadioGroup urdu,english;
     Button update;
     private FragmentSettingsBinding binding;
-    String uTranslator, eTranslator;
+    GlobalSettings s;
     public View onCreateView(@NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState) {
             binding = FragmentSettingsBinding.inflate(inflater, container, false);
+        final View rootView =
+                inflater.inflate(R.layout.fragment_settings, container, false);
             View root = binding.getRoot();
-            urdu = binding.radioGroup;
-            english = binding.radioGroup2;
+            urdu = binding.urduRb;
+            english = binding.englishRb;
             update = binding.button8;
-            urdu.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-            {
-                public void onCheckedChanged(RadioGroup group, int checkedId) {
-                    switch(checkedId) {
-                        case R.id.radioButton1:
-                            uTranslator = "fateh";
-                            break;
-                        case R.id.radioButton2:
-                            uTranslator = "mehmood";
-                            break;
-                    }
-                }
-            });
-            english.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-            {
-                public void onCheckedChanged(RadioGroup group, int checkedId) {
-                    switch(checkedId) {
-                        case R.id.radioButton3:
-                            eTranslator = "mohsin";
-                            break;
-                        case R.id.radioButton4:
-                            eTranslator = "taqi";
-                            break;
-                    }
-                }
-            });
-
+            s = GlobalSettings.getInstance();
             update.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    int urduSlecetd = urdu.getCheckedRadioButtonId();
+                    int englishSelected = english.getCheckedRadioButtonId();
+                    RadioButton urduBtn = rootView.findViewById(urduSlecetd);
+                    RadioButton engBtn = rootView.findViewById(englishSelected);
+                    if(engBtn.getText().equals("Dr. Mohisn khan"))
+                        s.setEnglishTraslator("mohsin");
+                    else
+                        s.setEnglishTraslator("taqi");
+                    if(urduBtn.getText().equals("Fateh Muhammad Jalehndri"))
+                        s.setUrduTranslator("fateh");
+                    else
+                        s.setUrduTranslator("mehmood");
+                    Toast msg = Toast.makeText(getContext(),"Settings Updated!",Toast.LENGTH_SHORT);
+                    msg.show();
                 }
             });
             return root;
     }
 
-@Override
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;

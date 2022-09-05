@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_bg"
+    android:id="@+id/main_menu_conatiner"
     android:tint="#8c000000"
     tools:context=".ui.mainMenu.mainMenuFragment">
 

@@ -1,13 +1,10 @@
 package com.example.quranappv3.ui.settings;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -15,15 +12,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.quranappv3.DataBaseHelper;
 import com.example.quranappv3.GlobalSettings;
 import com.example.quranappv3.R;
-import com.example.quranappv3.Surah;
-import com.example.quranappv3.SurahContext;
-import com.example.quranappv3.SurahCustomListConfig;
 import com.example.quranappv3.databinding.FragmentSettingsBinding;
-
-import java.util.List;
 
 public class settingsFragment extends Fragment {
     RadioGroup urdu,english;

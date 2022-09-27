@@ -71,9 +71,10 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.myView
                     "noorehuda.ttf");
             Typeface urduface = Typeface.createFromAsset(
                     context.getAssets(),
-                    "Jameel Noori Nastaleeq.ttf");
+                    "Jameel Noori Nastaleeq.ttfq");
             arabicAyat.setTypeface(typeface);
             urduTrans.setTypeface(urduface);
+            englishTrans.setTypeface(urduface);
         }
     }
 }
